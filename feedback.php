@@ -16,4 +16,8 @@ function feedback()
 	$query = INSERT INTO websiteuser(name,email,rate,comment)values($name,$email,$rate,$comment);
 	mysql_query($query);	
 }
-
+if (isset($_POST['submit']))
+{
+	feedback();
+}
+?>
